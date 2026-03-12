@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-container
-        image: kowshika588/tr-1:latest
+        image: kowshika588/tr-2:latest
         ports:
         - containerPort: 80
 ---
