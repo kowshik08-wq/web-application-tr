@@ -48,6 +48,13 @@ pipeline{
                 sh 'docker push kowshika588/tr-1'
             }
         }
+        stage('Deploy to Kubernetes') {
+            steps {
+                sh '''
+                microk8s.kubectl apply -f deployment.yaml
+                '''
+            }
+        }
         
     }
 }
